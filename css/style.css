@@ -42,9 +42,11 @@ You can use them freely in your products & projects - print or digital, commerci
 }
 
 .topbar, footer {
-    padding: 30px;
     margin: -10px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .topbar ul, footer ul {
@@ -61,7 +63,14 @@ You can use them freely in your products & projects - print or digital, commerci
     border-radius: 0 0 15px 15px;
 }
 
+.site-name, .site-search, .site-nav {
+    text-align: center;
+    flex: 1rem;
+    padding: 20px 0px;
+}
+
 footer {
+    padding: 20px;
     border-top: 3px solid var(--cta);
     border-radius: 15px 15px 0 0;
     bottom: 0;
@@ -74,6 +83,8 @@ main, .content-container {
 /***** HEADERS *****/
 .logo, h1, h2, h3, h4, h5, h6 {
     font-family: var(--title);
+    text-decoration: underline;
+    text-align: center;
 }
 
 /***** CONTENT *****/
@@ -93,9 +104,92 @@ p, .tagline, li, label, input {
 /********** MEDIA QUERIES **********/
 
 /***** MOBILE *****/
+@media only screen and (max-width: 500px) {
 
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    .hb-cb {
+        position: fixed;
+        width: 35px;
+        z-index: 3;
+        cursor: pointer;
+      }
+      
+      #hb-nav {
+        display: none;
+      }
+      
+      #hb-nav:checked ~ nav {
+        display: flex;
+        flex-direction: row;
+      }
+
+    header nav {
+        display: none;
+    }
+
+}
 
 /***** TABLET *****/
+@media only screen and (min-width: 500px) {
 
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .hb-cb {
+        position: fixed;
+        width: 35px;
+        z-index: 3;
+        cursor: pointer;
+      }
+      
+      #hb-nav {
+        display: none;
+      }
+      
+      #hb-nav:checked ~ nav {
+        display: flex;
+        flex-direction: row;
+      }
+
+    header nav {
+        display: none;
+    }
+
+}
 
 /***** DESKTOP *****/
+@media only screen and (min-width: 910px) {
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .hb-cb {
+        display: none;
+      }
+      
+      #hb-nav {
+        display: none;
+      }
+
+    header nav {
+        display: flex;
+    }
+
+}
