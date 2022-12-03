@@ -5,21 +5,60 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widht, initial-scales=1.0">
         <meta name="description" content="###">
-        <title>### | Home</title>
+        <title>Contact | Wizards of the Web</title>
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="variables">
         <header>
-
+            <section class="topbar">
+                <p class="logo">Wizards of the Web</p>
+                <p class="tagline">- a blog for D&D ideas -</p>
+                <form class="searchbar" action="#">
+                    <input type="text" placeholder="Search for posts">
+                    <button type="submit">
+                        <img class="icon" src="#" alt="Search icon">
+                    </button>
+                </form>
+                <label for="hb-nav">
+                    <img src="#" class="hb-cb" alt="Menu icon for mobile devices">
+                </label>
+                <input type="checkbox" id="hb-nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="current">Home</a></li>
+                        <li><a href="post-list.html">Post list</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </section>
         </header>
 
         <main>
-
+            <section class="content-container">
+                <h1>Contact us</h1>
+                <p>Do you have any questions about the blog, its content, or maybe you have some suggestions for something we should post about? Let us know in the form down below, and we'll get back to you ASAP!</p>
+            </section>
+            <section class="content-container">
+                <from id="contactForm" name="contactForm" onsubmit="">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="mail">Mail</label><br>
+                    <input type="email" id="mail" name="mail" required><br>
+                    <label for="subject">Subject</label><br>
+                    <input type="text" id="subject" name="subject" required><br>
+                    <label for="message">Message</label><br>
+                    <input type="textarea" id="message" name="message" required><br>
+            </section>
         </main>
 
         <footer>
-
+            <ul>
+                <li>© Ida Katrine Presttun-Brekken,2022</li>
+                <li>Project Exam, semester 2</li>
+                <li>Noroff School of Technology and Digital Media</li>
+            </ul>
         </footer>
 
         <script src="/js/contact.js" type="module"></script>

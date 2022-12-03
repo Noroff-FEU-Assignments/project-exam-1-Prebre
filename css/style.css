@@ -1,11 +1,11 @@
 /********** ASSETS **********/
 
 /***** COLOURS
-# - Main bg
-# - Alternate bg
-# - Main txt
-# - Alternate txt
-# - CTA/Highlight
+#ffffff - Main bg (White)
+#e9e9e9 - Alternate bg (Light grey)
+#3b3b3b - Main txt (Dark grey)
+#000000 - Alternate txt (Black)
+#cf0000 - CTA/Highlight (Red)
 *****/
 
 /***** FONTS *****/
@@ -15,24 +15,71 @@ You can use them freely in your products & projects - print or digital, commerci
 /* Prodelt Co - @graptail */
 @font-face {
     font-family: "Prodelt Co";
-    src: url("fonts/ProdeltCo.ttf");
+    src: url("../fonts/ProdeltCo.ttf");
 }
 /* Fjalla One - Sorkin Type */
 @font-face {
     font-family: "Fjalla One";
-    src: url("fonts/FjallaOne-Regular.ttf");
+    src: url("../fonts/FjallaOne-Regular.ttf");
 }
 
 /***** VARIABLES *****/
-
+.variables {
+    --bg-main: #ffffff;
+    --bg-alt: #e9e9e9;
+    --txt-main: #3b3b3b;
+    --txt-alt: #000000;
+    --cta: #cf0000;
+    --title: "Prodelt Co", "Playfair Display", Georgia, serif;
+    --paragraph: "Fjalla One", "Trebuchet MS", Arial, sans-serif;
+}
 
 /********** GLOBAL **********/
 
-/***** HEADERS *****/
+/***** CONTAINERS *****/
+.topbar, footer, input {
+    background-color: var(--bg-alt);
+}
 
+.topbar, footer {
+    padding: 30px;
+    margin: -10px;
+    display: flex;
+}
+
+.topbar ul, footer ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.topbar p, .topbar li, footer li {
+    flex: 1rem;
+}
+
+.topbar {
+    border-bottom: 3px solid var(--cta);
+    border-radius: 0 0 15px 15px;
+}
+
+footer {
+    border-top: 3px solid var(--cta);
+    border-radius: 15px 15px 0 0;
+    bottom: 0;
+}
+
+main, .content-container {
+    margin: 30px 50px;
+}
+
+/***** HEADERS *****/
+.logo, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
 
 /***** CONTENT *****/
-
+p, .tagline, li, label, input {
+    font-family: var(--paragraph);
+}
 
 /***** LINKS *****/
 
