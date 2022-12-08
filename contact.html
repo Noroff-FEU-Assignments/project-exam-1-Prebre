@@ -21,13 +21,13 @@
                     <form class="searchbar" action="#">
                         <input type="text" placeholder="Search for posts">
                         <button type="submit">
-                            <img class="icon" src="#" alt="Search icon">
+                            <img class="icon-s" src="/visuals/search.png" alt="Search icon"> &nbsp; Search
                         </button>
                     </form>
                 </div>
                 <div class="site-nav">
                     <label for="hb-nav">
-                        <img src="#" class="hb-cb" alt="Menu icon for mobile devices">
+                        <img src="/visuals/menu-burger.png" class="hb-cb" alt="Menu icon for mobile devices">
                     </label>
                     <input type="checkbox" id="hb-nav">
                     <nav>
@@ -48,7 +48,7 @@
                 <p>Do you have any questions about the blog, its content, or maybe you have some suggestions for something we should post about? Let us know in the form down below, and we'll get back to you ASAP!</p>
             </section>
             <section class="content-container">
-                <from id="contactForm" name="contactForm" onsubmit="">
+                <form id="contactForm" name="contactForm" onsubmit="">
                     <label for="name">Name</label><br>
                     <input type="text" id="name" name="name" required><br>
                     <label for="mail">Mail</label><br>
@@ -56,7 +56,9 @@
                     <label for="subject">Subject</label><br>
                     <input type="text" id="subject" name="subject" required><br>
                     <label for="message">Message</label><br>
-                    <input type="textarea" id="message" name="message" required><br>
+                    <textarea id="message" name="message" required></textarea><br>
+                    <button id="submit" class="cta">Send form &nbsp; <img src="/visuals/paper-plane.png" alt="Paper plane icon" class="icon-l"></button>
+                </form>
             </section>
         </main>
 

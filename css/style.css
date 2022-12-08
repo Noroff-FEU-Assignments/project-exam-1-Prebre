@@ -37,16 +37,17 @@ You can use them freely in your products & projects - print or digital, commerci
 /********** GLOBAL **********/
 
 /***** CONTAINERS *****/
-.topbar, footer, input {
+.topbar, footer {
     background-color: var(--bg-alt);
 }
 
 .topbar, footer {
-    margin: -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border: 3px solid var(--cta);
+    border-radius: 15px;
 }
 
 .topbar ul, footer ul {
@@ -58,26 +59,47 @@ You can use them freely in your products & projects - print or digital, commerci
     flex: 1rem;
 }
 
-.topbar {
-    border-bottom: 3px solid var(--cta);
-    border-radius: 0 0 15px 15px;
-}
-
 .site-name, .site-search, .site-nav {
     text-align: center;
     flex: 1rem;
     padding: 20px 0px;
 }
 
+.site-search {
+    align-self: baseline;
+}
+
 footer {
     padding: 20px;
-    border-top: 3px solid var(--cta);
-    border-radius: 15px 15px 0 0;
     bottom: 0;
 }
 
-main, .content-container {
-    margin: 30px 50px;
+main {
+    margin: 0 auto;
+}
+
+.content-container, #latest-posts, #list-container, #author-container {
+    margin: 30px auto;
+}
+
+#latest-posts {
+
+}
+
+#list-container {
+
+}
+
+#author-container {
+
+}
+
+.card {
+    background-color: var(--bg-alt);
+    border: 2px solid var(--txt-main);
+    border-radius: 15px;
+    padding: 10px 15px 15px 15px;
+    margin-bottom: 30px;
 }
 
 /***** HEADERS *****/
@@ -88,18 +110,136 @@ main, .content-container {
 }
 
 /***** CONTENT *****/
-p, .tagline, li, label, input {
+.loading {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .loading div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--cta);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .loading div:nth-child(1) {
+    left: 8px;
+    animation: loading1 0.6s infinite;
+  }
+  .loading div:nth-child(2) {
+    left: 8px;
+    animation: loading2 0.6s infinite;
+  }
+  .loading div:nth-child(3) {
+    left: 32px;
+    animation: loading2 0.6s infinite;
+  }
+  .loading div:nth-child(4) {
+    left: 56px;
+    animation: loading3 0.6s infinite;
+  }
+  @keyframes loading1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes loading3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes loading2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+  p, .tagline, li, label, input {
     font-family: var(--paragraph);
 }
 
 /***** LINKS *****/
 
+a {
+    color: var(--cta);
+}
+
+a:hover {
+    color: var(--txt-alt);
+    font-style: italic;
+}
+
+button, .cta {
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.cta {
+    background-color: var(--cta);
+    color: var(--bg-main);
+    font-family: var(--title);
+    font-size: 1.6rem;
+    border: 3px solid var(--txt-alt);
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.cta:hover {
+    background-color: var(--bg-alt);
+    color: var(--cta);
+}
 
 /***** FORMS *****/
+input, textarea {
+    background-color: var(--bg-alt);
+    border-radius: 5px;
+}
 
+.searchbar input {
+    background-color: var(--bg-main);
+}
+
+#contactForm {
+    margin-left: 50px;
+}
+
+#contactForm label {
+    margin-left: 20px;
+}
+
+#contactForm input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
 /***** IMAGES *****/
 
+.icon-s {
+    width: 10px;
+}
+
+.icon-l {
+    width: 20px;
+}
 
 /********** MEDIA QUERIES **********/
 
@@ -108,6 +248,32 @@ p, .tagline, li, label, input {
 
     .logo {
         font-size: 1.5rem;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    h5 {
+        font-size: 0.7rem;
+    }
+
+    h6 {
+        font-size: 0.6rem;
     }
 
     .tagline {
@@ -116,23 +282,46 @@ p, .tagline, li, label, input {
 
     .hb-cb {
         position: fixed;
-        width: 35px;
+        top: 25px;
+        right: 25px;
         z-index: 3;
         cursor: pointer;
-      }
+        width: 25px;
+    }
       
-      #hb-nav {
-        display: none;
-      }
-      
-      #hb-nav:checked ~ nav {
-        display: flex;
-        flex-direction: row;
-      }
-
-    header nav {
+    #hb-nav {
         display: none;
     }
+      
+    #hb-nav:checked ~ nav {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        right:0;
+    }
+    
+    nav li {
+        margin: 10px 5px 0px 0px;
+        width: 70px;
+    }
+
+    input, textarea {
+        width: 150px;
+    }
+    
+    .searchbar input {
+        width: 85px;
+    }
+
+    .content-container, #latest-posts, #list-container, #author-container {
+    width: 370px;
+}
 
 }
 
@@ -141,6 +330,32 @@ p, .tagline, li, label, input {
 
     .logo {
         font-size: 1.7rem;
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    h6 {
+        font-size: 0.7rem;
     }
 
     .tagline {
@@ -149,23 +364,46 @@ p, .tagline, li, label, input {
 
     .hb-cb {
         position: fixed;
-        width: 35px;
+        top: 25px;
+        right: 25px;
         z-index: 3;
         cursor: pointer;
-      }
+        width: 30px;
+    }
       
-      #hb-nav {
-        display: none;
-      }
-      
-      #hb-nav:checked ~ nav {
-        display: flex;
-        flex-direction: row;
-      }
-
-    header nav {
+    #hb-nav {
         display: none;
     }
+      
+    #hb-nav:checked ~ nav {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    nav li {
+        margin: 0px 5px;
+        width: 60px;
+    }
+
+    input, textarea {
+        width: 200px;
+    }
+    
+    .searchbar input {
+        width: 150px;
+    }
+
+    .content-container, #latest-posts, #list-container, #author-container {
+    width: 450px;
+}
 
 }
 
@@ -174,6 +412,31 @@ p, .tagline, li, label, input {
 
     .logo {
         font-size: 2rem;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    h6 {
+        font-size: 1rem;
     }
 
     .tagline {
@@ -188,8 +451,30 @@ p, .tagline, li, label, input {
         display: none;
       }
 
-    header nav {
+    nav {
         display: flex;
     }
+
+    nav ul {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    nav li {
+        margin: 0px 5px;
+        width: 70px;
+    }
+
+    input, textarea {
+        width: 300px;
+    }
+    
+    .searchbar input {
+        width: 200px;
+    }
+
+    .content-container, #latest-posts, #list-container, #author-container {
+    width: 600px;
+}
 
 }
