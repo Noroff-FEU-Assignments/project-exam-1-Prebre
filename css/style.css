@@ -59,7 +59,7 @@ You can use them freely in your products & projects - print or digital, commerci
     flex: 1rem;
 }
 
-.site-name, .site-search, .site-nav {
+.site-name, .site-search {
     text-align: center;
     flex: 1rem;
     padding: 20px 0px;
@@ -78,7 +78,7 @@ main {
     margin: 0 auto;
 }
 
-.content-container, #latest-posts, #list-container, #author-container {
+.content-container, #latest-posts, #list-container, #author-container, #form-container {
     margin: 30px auto;
 }
 
@@ -94,6 +94,15 @@ main {
 
 }
 
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#submit {
+
+}
 .card {
     background-color: var(--bg-alt);
     border: 2px solid var(--txt-main);
@@ -116,6 +125,7 @@ main {
     position: relative;
     width: 80px;
     height: 80px;
+    margin: 0 auto;
   }
   .loading div {
     position: absolute;
@@ -169,6 +179,11 @@ main {
   
   p, .tagline, li, label, input {
     font-family: var(--paragraph);
+}
+
+nav {
+    display: inline;
+    width: 100%;
 }
 
 /***** LINKS *****/
@@ -281,7 +296,7 @@ textarea {
     }
 
     .hb-cb {
-        position: fixed;
+        position: absolute;
         top: 25px;
         right: 25px;
         z-index: 3;
@@ -302,13 +317,9 @@ textarea {
     }
 
     nav ul {
-        flex-direction: row;
-        right:0;
-    }
-    
-    nav li {
-        margin: 10px 5px 0px 0px;
-        width: 70px;
+        flex-direction: column;
+        right: 0;
+        text-align: right;
     }
 
     input, textarea {
@@ -363,7 +374,7 @@ textarea {
     }
 
     .hb-cb {
-        position: fixed;
+        position: absolute;
         top: 25px;
         right: 25px;
         z-index: 3;
@@ -384,13 +395,9 @@ textarea {
     }
 
     nav ul {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    nav li {
-        margin: 0px 5px;
-        width: 60px;
+        flex-direction: column;
+        right: 0;
+        text-align: right;
     }
 
     input, textarea {
@@ -401,7 +408,7 @@ textarea {
         width: 150px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-container {
+    .content-container, #latest-posts, #list-container, #author-container, #form-container {
     width: 450px;
 }
 
@@ -457,12 +464,8 @@ textarea {
 
     nav ul {
         flex-direction: row;
-        text-align: left;
-    }
-    
-    nav li {
-        margin: 0px 5px;
-        width: 70px;
+        right: 0;
+        text-align: right;
     }
 
     input, textarea {
