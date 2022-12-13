@@ -100,9 +100,6 @@ main {
     align-content: center;
 }
 
-#submit {
-
-}
 .card {
     background-color: var(--bg-alt);
     border: 2px solid var(--txt-main);
@@ -181,9 +178,15 @@ main {
     font-family: var(--paragraph);
 }
 
-nav {
-    display: inline;
-    width: 100%;
+nav ul {
+    flex-direction: row;
+    text-align: center;
+    padding-left: 0px;
+}
+
+nav li {
+    width: 75px;
+    padding: 0px 10px;
 }
 
 /***** LINKS *****/
@@ -197,6 +200,12 @@ a:hover {
     font-style: italic;
 }
 
+.current {
+    color: var(--txt-alt);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
 button, .cta {
     cursor: pointer;
     margin: 10px auto;
@@ -206,10 +215,8 @@ button, .cta {
     background-color: var(--cta);
     color: var(--bg-main);
     font-family: var(--title);
-    font-size: 1.6rem;
     border: 3px solid var(--txt-alt);
     border-radius: 15px;
-    padding: 10px 15px;
 }
 
 .cta:hover {
@@ -218,6 +225,7 @@ button, .cta {
 }
 
 /***** FORMS *****/
+
 input, textarea {
     background-color: var(--bg-alt);
     border-radius: 5px;
@@ -246,14 +254,14 @@ textarea {
     overflow-x: hidden;
 }
 
+#submit {
+    margin: 30px 23%;
+}
+
 /***** IMAGES *****/
 
 .icon-s {
     width: 10px;
-}
-
-.icon-l {
-    width: 20px;
 }
 
 /********** MEDIA QUERIES **********/
@@ -314,16 +322,20 @@ textarea {
 
     nav {
         display: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        right: 0;
-        text-align: right;
+        justify-content: center;
     }
 
     input, textarea {
         width: 150px;
+    }
+
+    .cta {
+    font-size: 1rem;
+    padding: 7px 7px 7px 9px;
+    }
+
+    .cta .icon-l {
+        display: none;
     }
     
     .searchbar input {
@@ -332,7 +344,11 @@ textarea {
 
     .content-container, #latest-posts, #list-container, #author-container {
     width: 370px;
-}
+    }
+
+    footer li {
+        font-size: 0.8rem;
+    }
 
 }
 
@@ -389,19 +405,23 @@ textarea {
     #hb-nav:checked ~ nav {
         display: flex;
     }
-
+    
     nav {
         display: none;
-    }
-
-    nav ul {
-        flex-direction: column;
-        right: 0;
-        text-align: right;
+        justify-content: center;
     }
 
     input, textarea {
         width: 200px;
+    }
+
+    .cta {
+    font-size: 1rem;
+    padding: 8px 10px;
+    }
+
+    .icon-l {
+        width: 13px;
     }
     
     .searchbar input {
@@ -410,7 +430,11 @@ textarea {
 
     .content-container, #latest-posts, #list-container, #author-container, #form-container {
     width: 450px;
-}
+    }
+
+    footer li {
+        font-size: 0.9rem;
+    }
 
 }
 
@@ -460,16 +484,20 @@ textarea {
 
     nav {
         display: flex;
-    }
-
-    nav ul {
-        flex-direction: row;
-        right: 0;
-        text-align: right;
+        justify-content: center;
     }
 
     input, textarea {
         width: 300px;
+    }
+
+    .cta {
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    }
+
+    .icon-l {
+        width: 20px;
     }
     
     .searchbar input {
@@ -478,6 +506,10 @@ textarea {
 
     .content-container, #latest-posts, #list-container, #author-container {
     width: 600px;
-}
+    }
+
+    footer li {
+        font-size: 1rem;
+    }
 
 }
