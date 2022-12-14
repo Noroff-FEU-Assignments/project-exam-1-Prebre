@@ -83,15 +83,18 @@ main {
 }
 
 #latest-posts {
-
+    border-top: 1px solid var(--bg-alt);
+    padding-top: 10px;
 }
 
 #list-container {
-
+    border-top: 1px solid var(--bg-alt);
+    padding-top: 30px;
 }
 
 #author-container {
-
+    border-top: 1px solid var(--bg-alt);
+    padding-top: 10px;
 }
 
 #form-container {
@@ -189,6 +192,23 @@ nav li {
     padding: 0px 10px;
 }
 
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.author {
+    display: inline-block;
+    left: 0;
+    margin-right: 100px;
+}
+
+.date {
+    display: inline;
+    right: 0;
+    margin-left: 100px;
+}
+
 /***** LINKS *****/
 
 a {
@@ -262,6 +282,32 @@ textarea {
 
 .icon-s {
     width: 10px;
+}
+
+.carousel-arrow {    
+    background-color: transparent;
+    border: none;
+}
+
+.carousel-arrow img {
+    width: 30px;
+}
+
+.carousel-img {
+    max-width: 550px;
+    margin: auto;
+    border: 1px solid var(--txt-alt);
+    border-radius: 15px;
+}
+
+.profile-img img {
+    width: 50px;
+}
+
+.profile-img {
+    margin: 0px auto;
+    border: 1px solid var(--txt-alt);
+    border-radius: 100%;
 }
 
 /********** MEDIA QUERIES **********/

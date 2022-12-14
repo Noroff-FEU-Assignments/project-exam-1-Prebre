@@ -18,10 +18,10 @@ async function getLatest() {
                             break;
                         }
 
-                        listContainer.innerHTML += `<li class="carousel">
+                        latestContainer.innerHTML += `<li class="carousel">
                         <h3><a href="#" alt="#">${post[i].title.rendered}</a></h3><br>
-                        <img src="${post[i].jetpack_featured_media_url}" alt="#"><br>
-                        <p class="author">${post[i].author}</p> &nbsp; <p class="date">${post[i].date}</p><br>
+                        <img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="#"><br>
+                        <p class="author">Posted by ${post[i].author}</p> &nbsp; <p class="date">Posted on ${post[i].date}</p><br>
                         <p class="excerpt">${post[i].excerpt.rendered}</p><br>
                         <input type="button" class="cta" onclick="location.href='#';" value="Read more" />
                         </li>`
