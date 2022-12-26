@@ -78,13 +78,15 @@ main {
     margin: 0 auto;
 }
 
-.content-container, #latest-posts, #list-container, #author-container, #form-container {
+.content-container, #latest-posts, #list-container, #author-carousel, #author-container, #form-container {
     margin: 30px auto;
 }
 
-#latest-posts {
+#latest-posts, #author-carousel {
     border-top: 1px solid var(--bg-alt);
     padding-top: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 #list-container {
@@ -92,9 +94,29 @@ main {
     padding-top: 30px;
 }
 
-#author-container {
-    border-top: 1px solid var(--bg-alt);
-    padding-top: 10px;
+#author-container, #latest-container {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+}
+
+.img-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button-wrapper {
+    text-align: center;
 }
 
 #form-container {
@@ -116,6 +138,10 @@ main {
     font-family: var(--title);
     text-decoration: underline;
     text-align: center;
+}
+
+.carousel h3 {
+    margin-top: 0;
 }
 
 /***** CONTENT *****/
@@ -194,7 +220,6 @@ nav li {
 
 ul {
     padding-left: 0;
-    list-style: none;
 }
 
 .author {
@@ -207,6 +232,10 @@ ul {
     display: inline;
     right: 0;
     margin-left: 100px;
+}
+
+.excerpt {
+    padding: 0 15px;
 }
 
 /***** LINKS *****/
@@ -284,28 +313,42 @@ textarea {
     width: 10px;
 }
 
-.carousel-arrow {    
+.carousel-arrow {
+    top: 150px;
+    margin: auto;
+    position: absolute;
+    display: flex;
     background-color: transparent;
     border: none;
 }
 
+#prev-post, #prev-author {
+    left: 0;
+    padding-left: 0px;
+}
+
+#next-post, #next-author {
+    right: 0;
+    padding-right: 0px;
+}
+
 .carousel-arrow img {
-    width: 30px;
+    width: 40px;
 }
 
 .carousel-img {
-    max-width: 550px;
+    max-width: 500px;
+    max-height: 300px;
     margin: auto;
     border: 1px solid var(--txt-alt);
     border-radius: 15px;
 }
 
 .profile-img img {
-    width: 50px;
+    width: 60px;
 }
 
 .profile-img {
-    margin: 0px auto;
     border: 1px solid var(--txt-alt);
     border-radius: 100%;
 }
