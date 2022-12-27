@@ -78,11 +78,11 @@ main {
     margin: 0 auto;
 }
 
-.content-container, #latest-posts, #list-container, #author-carousel, #author-container, #form-container {
+.content-container, #latest-posts, #list-container, #author-bio, #form-container {
     margin: 30px auto;
 }
 
-#latest-posts, #author-carousel {
+#latest-posts, #author-bio {
     border-top: 1px solid var(--bg-alt);
     padding-top: 10px;
     position: relative;
@@ -96,12 +96,14 @@ main {
 
 #author-container, #latest-container {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 30px 0;
     display: flex;
     width: 100%;
     overflow: scroll;
     scroll-behavior: smooth;
     list-style: none;
+    scrollbar-color: var(--cta) var(--bg-alt);
+    scrollbar-width: thick;
 }
 
 .carousel {
@@ -138,10 +140,6 @@ main {
     font-family: var(--title);
     text-decoration: underline;
     text-align: center;
-}
-
-.carousel h3 {
-    margin-top: 0;
 }
 
 /***** CONTENT *****/
@@ -222,6 +220,11 @@ ul {
     padding-left: 0;
 }
 
+.carousel h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
 .author {
     display: inline-block;
     left: 0;
@@ -235,7 +238,7 @@ ul {
 }
 
 .excerpt {
-    padding: 0 15px;
+    padding: 0 60px;
 }
 
 /***** LINKS *****/
@@ -334,11 +337,10 @@ textarea {
 
 .carousel-arrow img {
     width: 40px;
+    display: none;
 }
 
 .carousel-img {
-    max-width: 500px;
-    max-height: 300px;
     margin: auto;
     border: 1px solid var(--txt-alt);
     border-radius: 15px;
@@ -431,8 +433,13 @@ textarea {
         width: 85px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-container {
-    width: 370px;
+    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
+    width: 350px;
+    }
+
+    .carousel-img {
+        max-width: 250px;
+        max-height: 200px;
     }
 
     footer li {
@@ -517,8 +524,13 @@ textarea {
         width: 150px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-container, #form-container {
+    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
     width: 450px;
+    }
+    
+    .carousel-img {
+        max-width: 350px;
+        max-height: 250px;
     }
 
     footer li {
@@ -593,8 +605,13 @@ textarea {
         width: 200px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-container {
+    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
     width: 600px;
+    }
+
+    .carousel-img {
+        max-width: 500px;
+        max-height: 300px;
     }
 
     footer li {
