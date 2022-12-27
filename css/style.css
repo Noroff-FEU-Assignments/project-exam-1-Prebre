@@ -142,6 +142,10 @@ main {
     text-align: center;
 }
 
+.logo {
+    color: var(--txt-alt);
+}
+
 /***** CONTENT *****/
 .loading {
     text-align: center;
@@ -225,20 +229,30 @@ ul {
     font-size: 1.5rem;
 }
 
-.author {
-    display: inline-block;
-    left: 0;
-    margin-right: 100px;
-}
-
-.date {
-    display: inline;
-    right: 0;
-    margin-left: 100px;
-}
-
 .excerpt {
     padding: 0 60px;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.post-img img {
+    max-width: 100%;
+    border: 1px solid var(--txt-alt);
+    border-radius: 15px;
+}
+
+.post-txt {
+    padding: 10px 20px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--txt-alt);
+    border-radius: 15px;
+}
+
+.prev-post, .next-post {
+    font-family: var(--paragraph);
+    text-transform: uppercase;
 }
 
 /***** LINKS *****/
@@ -442,6 +456,11 @@ textarea {
         max-height: 200px;
     }
 
+    .author, .datem .prev-post, .next-post {
+        display: inline-block;
+        left: 0;
+    }
+
     footer li {
         font-size: 0.8rem;
     }
@@ -533,6 +552,18 @@ textarea {
         max-height: 250px;
     }
 
+    .author, .prev-post {
+        display: inline-block;
+        left: 0;
+        margin-right: 50px;
+    }
+    
+    .date, .next-post {
+        display: inline;
+        right: 0;
+        margin-left: 50px;
+    }
+
     footer li {
         font-size: 0.9rem;
     }
@@ -612,6 +643,18 @@ textarea {
     .carousel-img {
         max-width: 500px;
         max-height: 300px;
+    }
+
+    .author, .prev-post {
+        display: inline-block;
+        left: 0;
+        margin-right: 100px;
+    }
+    
+    .date, .next-post {
+        display: inline;
+        right: 0;
+        margin-left: 100px;
     }
 
     footer li {

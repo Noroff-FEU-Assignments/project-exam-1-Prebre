@@ -15,8 +15,8 @@ async function getList() {
                 for(let i = 0; i < post.length; i++) {
 
                         listContainer.innerHTML += `<div class="card">
-                                <a href="#"><h2>${post[i].title.rendered}</h2></a>
-                                <p>Posted by <a href="#">${post[i].author}</a> on ${post[i].date}</p>
+                                <a href="post.html?id=${post[i].id}"><h2>${post[i].title.rendered}</h2></a>
+                                <p>Posted by ${post[i].author} on ${post[i].date}</p>
                                 <p>${post[i].excerpt.rendered}</p>
                                 </div>`
 
