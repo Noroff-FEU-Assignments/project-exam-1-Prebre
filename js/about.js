@@ -19,6 +19,23 @@ async function getAuthors() {
                         <h3>${author[i].name}</h3>
                         <p class="excerpt">${author[i].description}</p>
                         </li>`
+
+                        const carousel = document.querySelector(".carousel");
+
+                        const prevAuthor = document.getElementById("prev-author");
+
+                        const nextAuthor = document.getElementById("next-author");
+
+
+                        nextAuthor.addEventListener("click", () => {
+                                const carouselWidth = carousel.clientWidth;
+                                authorContainer.scrollLeft += carouselWidth;
+                        });
+
+                        prevAuthor.addEventListener("click", () => {
+                                const carouselWidth = carousel.clientWidth;
+                                authorContainer.scrollLeft -= carouselWidth;
+                        });
                 }
         }
         catch(error) {
@@ -28,22 +45,3 @@ async function getAuthors() {
 }
 
 getAuthors();
-
-// Arrow buttons
-
-const carousel = document.querySelector(".carousel");
-
-const prevAuthor = document.getElementById("prev-author");
-
-const nextAuthor = document.getElementById("next-author");
-
-
-nextAuthor.addEventListener("click", () => {
-        const carouselWidth = carousel.clientWidth;
-        authorContainer.scrollLeft += carouselWidth;
-});
-
-prevAuthor.addEventListener("click", () => {
-        const carouselWidth = carousel.clientWidth;
-        authorContainer.scrollLeft -= carouselWidth;
-});

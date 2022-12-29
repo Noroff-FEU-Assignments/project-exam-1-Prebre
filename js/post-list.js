@@ -1,6 +1,6 @@
 // Post list
 
-import { api } from "./constants/api.js";
+import { posts } from "./constants/api.js";
 
 const listContainer = document.querySelector("#list-container");
 
@@ -8,7 +8,7 @@ listContainer.innerHTML = "";
 
 async function getList() {
         try {
-                const response = await fetch(api);
+                const response = await fetch(posts);
 
                 const post = await response.json();
 
@@ -16,7 +16,7 @@ async function getList() {
 
                         listContainer.innerHTML += `<div class="card">
                                 <a href="post.html?id=${post[i].id}"><h2>${post[i].title.rendered}</h2></a>
-                                <p>Posted by ${post[i].author} on ${post[i].date}</p>
+                                <div class="list-img-container"><img src="${post[i].jetpack_featured_media_url}" class="list-img" alt="#"></div>
                                 <p>${post[i].excerpt.rendered}</p>
                                 </div>`
 

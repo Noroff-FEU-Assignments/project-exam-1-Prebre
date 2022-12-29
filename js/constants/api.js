@@ -1,6 +1,10 @@
 // API
 
-export const api = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wp/v2/posts";
+export const api = "https://ikpb-mar21pt-cms-ma1.com/wp-json/wp/v2/";
+
+export const posts = `${api}posts`;
+
+export const authors = `${api}users`;
 
 
 // Key & Secret
