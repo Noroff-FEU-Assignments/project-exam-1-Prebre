@@ -4,6 +4,8 @@ import { posts } from "./constants/api.js";
 
 import { authors } from "./constants/api.js";
 
+import { categories } from "./constants/api.js";
+
 const queryString = document.location.search;
 
 const parameters = new URLSearchParams(queryString);
@@ -34,12 +36,19 @@ async function getPost() {
 
         const author = await authorResponse.json();
 
+        const categoryURL = `${categories}/${post.categories[0]}`;
+
+        const categoryResponse = await fetch(categoryURL);
+
+        const category = await categoryResponse.json();
+
             console.log(post);
 
             console.log(author);
 
             postContainer.innerHTML += `<h1>${post.title.rendered}</h1>
             <p class="author">Written by &nbsp; ${author.name}</p><p class="date">Posted ${post.date}</p>
+            <p class="categories">Posted in ${category.name}</p>
             <div class="post-txt">
                 <div class="post-img"><img id="modal-img" src="${post.jetpack_featured_media_url}" alt="">
                 <div id="modal-container" class="modal">
@@ -47,7 +56,7 @@ async function getPost() {
                     <img class="modal-content" id="img-preview">
                 </div>
             </div>
-            ${post.content.rendered}</div></p>`
+            ${post.content.rendered}</div>`
         
             title.innerHTML += `${post.title.rendered} | WotW`
 

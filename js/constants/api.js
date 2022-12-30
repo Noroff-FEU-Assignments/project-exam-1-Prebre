@@ -6,6 +6,8 @@ export const posts = `${api}posts`;
 
 export const authors = `${api}users`;
 
+export const categories = `${api}categories`
+
 
 // Key & Secret
 

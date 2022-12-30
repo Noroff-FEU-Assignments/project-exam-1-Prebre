@@ -74,8 +74,22 @@ footer {
     bottom: 0;
 }
 
+body {
+    background-image: url("/images/bg-texture.png");
+    background-repeat: repeat;
+    background-size: 100px;
+}
+
 main {
     margin: 0 auto;
+}
+
+#welcome, #about, #contact {
+    padding: 0px 30px 30px;    
+    background-color: var(--bg-main);
+    border-left: 1px solid var(--txt-main);
+    border-right: 1px solid var(--txt-main);
+    border-radius: 15px;
 }
 
 .content-container, #latest-posts, #list-container, #author-bio, #form-container {
@@ -83,14 +97,17 @@ main {
 }
 
 #latest-posts, #author-bio {
-    border-top: 1px solid var(--bg-alt);
-    padding-top: 10px;
+    background-color: var(--bg-alt);
+    border-left: 1px solid var(--txt-alt);
+    border-right: 1px solid var(--txt-alt);
+    border-radius: 15px;
+    padding: 10px;
     position: relative;
     overflow: hidden;
 }
 
 #list-container {
-    border-top: 1px solid var(--bg-alt);
+    border-top: 1px solid var(--bg-main);
     padding-top: 30px;
 }
 
@@ -122,14 +139,20 @@ main {
 }
 
 #form-container {
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-content: center;
+    background-color: var(--bg-alt);
+    border-left: 1px solid var(--txt-alt);
+    border-right: 1px solid var(--txt-alt);
+    border-radius: 15px;
 }
 
 .card {
     background-color: var(--bg-alt);
-    border: 2px solid var(--txt-main);
+    border-left: 1px solid var(--txt-alt);
+    border-right: 1px solid var(--txt-alt);
     border-radius: 15px;
     padding: 10px 15px 15px 15px;
     margin-bottom: 30px;
@@ -237,6 +260,13 @@ ul {
     text-transform: uppercase;
 }
 
+.categories {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
 .excerpt {
     padding: 0 60px;
 }
@@ -316,7 +346,7 @@ button, .cta {
 /***** FORMS *****/
 
 input, textarea {
-    background-color: var(--bg-alt);
+    background-color: var(--bg-main);
     border-radius: 5px;
 }
 
@@ -360,12 +390,12 @@ textarea {
 
 #prev-post, #prev-author {
     left: 0;
-    padding-left: 0px;
+    padding-left: 10px;
 }
 
 #next-post, #next-author {
     right: 0;
-    padding-right: 0px;
+    padding-right: 10px;
 }
 
 .carousel-arrow img {
