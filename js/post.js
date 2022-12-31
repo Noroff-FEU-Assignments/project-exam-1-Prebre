@@ -46,17 +46,20 @@ async function getPost() {
 
             console.log(author);
 
-            postContainer.innerHTML += `<h1>${post.title.rendered}</h1>
-            <p class="author">Written by &nbsp; ${author.name}</p><p class="date">Posted ${post.date}</p>
-            <p class="categories">Posted in ${category.name}</p>
-            <div class="post-txt">
-                <div class="post-img"><img id="modal-img" src="${post.jetpack_featured_media_url}" alt="">
-                <div id="modal-container" class="modal">
-                    <span class="close">&times;</span>
-                    <img class="modal-content" id="img-preview">
+            postContainer.innerHTML += `<div class="post-txt">
+                <h1>${post.title.rendered}</h1>
+                <p class="author">Written by &nbsp; ${author.name}</p>
+                <p class="date">Posted ${post.date}</p>
+                <p class="categories">Posted in ${category.name}</p>
+                <div class="post-img">
+                    <img id="modal-img" src="${post.jetpack_featured_media_url}" alt="">
+                    <div id="modal-container" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img-preview">
+                    </div>
                 </div>
-            </div>
-            ${post.content.rendered}</div>`
+            ${post.content.rendered}
+            </div>`
         
             title.innerHTML += `${post.title.rendered} | WotW`
 

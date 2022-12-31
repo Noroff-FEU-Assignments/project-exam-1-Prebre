@@ -30,6 +30,7 @@ You can use them freely in your products & projects - print or digital, commerci
     --txt-main: #3b3b3b;
     --txt-alt: #000000;
     --cta: #cf0000;
+    --emph: #870000;
     --title: "Prodelt Co", "Playfair Display", Georgia, serif;
     --paragraph: "Fjalla One", "Trebuchet MS", Arial, sans-serif;
 }
@@ -84,8 +85,8 @@ main {
     margin: 0 auto;
 }
 
-#welcome, #about, #contact {
-    padding: 0px 30px 30px;    
+#welcome, #about, #contact, #blog-list {
+    padding: 30px;    
     background-color: var(--bg-main);
     border-left: 1px solid var(--txt-main);
     border-right: 1px solid var(--txt-main);
@@ -106,11 +107,6 @@ main {
     overflow: hidden;
 }
 
-#list-container {
-    border-top: 1px solid var(--bg-main);
-    padding-top: 30px;
-}
-
 #author-container, #latest-container {
     margin: 0 auto;
     padding: 0 0 30px 0;
@@ -119,7 +115,7 @@ main {
     overflow: scroll;
     scroll-behavior: smooth;
     list-style: none;
-    scrollbar-color: var(--cta) var(--bg-alt);
+    scrollbar-color: var(--emph) var(--bg-alt);
     scrollbar-width: thick;
 }
 
@@ -278,8 +274,8 @@ ul {
 
 .post-txt {
     padding: 10px 20px;
-    background-color: var(--bg-alt);
-    border: 1px solid var(--txt-alt);
+    background-color: var(--bg-main);
+    border: 1px solid var(--txt-main);
     border-radius: 15px;
 }
 
@@ -295,8 +291,8 @@ ul {
     font-family: var(--paragraph);
 }
 
-.wp-element-caption, cite {
-    color: var(--cta);
+.wp-element-caption, cite, .author, .date, .categories {
+    color: var(--emph);
 }
 
 .wp-element-caption {
@@ -377,6 +373,23 @@ textarea {
 
 .icon-s {
     width: 10px;
+}
+
+.top-button {
+    display: none;
+    position: fixed;
+    bottom: 200px;
+    padding: 15px;
+    z-index: 99;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--paragraph);
+    color: var(--cta);
+}
+
+.top-button:hover, #next-post:hover, #prev-post:hover, #next-author, #prev-author {
+    filter: grayscale(1);
 }
 
 .carousel-arrow {
@@ -562,6 +575,15 @@ textarea {
     .cta .icon-l {
         display: none;
     }
+
+    .top-button {
+        right: 0;
+        font-size: 0.8rem;
+    }
+
+    .top-button img {
+        width: 35px;
+    }
     
     .searchbar input {
         width: 85px;
@@ -576,7 +598,7 @@ textarea {
         max-height: 200px;
     }
 
-    .author, .datem .prev-post, .next-post {
+    .author, .date .prev-post, .next-post {
         display: inline-block;
         left: 0;
     }
@@ -658,6 +680,15 @@ textarea {
     .icon-l {
         width: 13px;
     }
+
+    .top-button {
+        right: 3%;
+        font-size: 1.2rem;
+    }
+
+    .top-button img {
+        width: 35px;
+    }
     
     .searchbar input {
         width: 150px;
@@ -672,16 +703,9 @@ textarea {
         max-height: 250px;
     }
 
-    .author, .prev-post {
+    .author, .date .prev-post, .next-post {
         display: inline-block;
         left: 0;
-        margin-right: 50px;
-    }
-    
-    .date, .next-post {
-        display: inline;
-        right: 0;
-        margin-left: 50px;
     }
 
     footer li {
@@ -751,6 +775,15 @@ textarea {
     .icon-l {
         width: 20px;
     }
+
+    .top-button {
+        right: 5%;
+        font-size: 1.3rem;
+    }
+
+    .top-button img {
+        width: 40px;
+    }
     
     .searchbar input {
         width: 200px;
@@ -774,7 +807,6 @@ textarea {
     .date, .next-post {
         display: inline;
         right: 0;
-        margin-left: 100px;
     }
 
     footer li {
