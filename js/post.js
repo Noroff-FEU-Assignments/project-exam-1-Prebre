@@ -48,9 +48,11 @@ async function getPost() {
 
             postContainer.innerHTML += `<div class="post-txt">
                 <h1>${post.title.rendered}</h1>
-                <p class="author">Written by &nbsp; ${author.name}</p>
-                <p class="date">Posted ${post.date}</p>
-                <p class="categories">Posted in ${category.name}</p>
+                <div class="author-date">
+                    <p class="author">Written by &nbsp; ${author.name}</p>
+                    <p class="date">Posted ${post.date}</p>
+                </div><br>
+                <p class="categories">Posted in<br>${category.name}</p>
                 <div class="post-img">
                     <img id="modal-img" src="${post.jetpack_featured_media_url}" alt="">
                     <div id="modal-container" class="modal">
