@@ -1,12 +1,12 @@
 ICONS
-    arrow-circle-left.png:
-    arrow-circle-right.png: 
-    arrow-circle-up.png:
+    arrow-circle-left.png: <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by SANB - Flaticon</a>
+    arrow-circle-right.png: <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by SANB - Flaticon</a>
+    arrow-circle-up.png: <a href="https://www.flaticon.com/free-icons/up-arrow" title="up arrow icons">Up arrow icons created by SANB - Flaticon</a>
     facebook.png: <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>
     instagram.png: <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Grow studio - Flaticon</a>
-    menu-burger.png:
+    menu-burger.png: <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by Lizel Arina - Flaticon</a>
     paper-plane.png:
-    search.png:
+    search.png: <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Pixel perfect - Flaticon</a>
     telegram.png: <a href="https://www.flaticon.com/free-icons/telegram" title="telegram icons">Telegram icons created by Pixel perfect - Flaticon</a>
     tumblr.png: <a href="https://www.flaticon.com/free-icons/tumblr-badge" title="tumblr badge icons">Tumblr badge icons created by Md Tanvirul Haque - Flaticon</a>
     twitter.png: <a href="https://www.flaticon.com/free-icons/twitter-social-badge" title="twitter social badge icons">Twitter social badge icons created by riajulislam - Flaticon</a>

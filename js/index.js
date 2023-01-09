@@ -20,9 +20,13 @@ async function getLatest() {
 
                         latestContainer.innerHTML += `<li class="carousel">
                         <h3><a href="post.html?id=${post[i].id}" alt="#">${post[i].title.rendered}</a></h3>
-                        <div class="img-container"><img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="#"></div>
+                        <div class="img-container">
+                                <img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="#">
+                        </div>
                         <p class="excerpt">${post[i].excerpt.rendered}</p>
-                        <div class="button-wrapper"><input type="button" class="cta" onclick="location.href='post.html?id=${post[i].id}';" value="Read more" /></div>
+                        <div class="button-wrapper">
+                                <input type="button" class="cta" onclick="location.href='post.html?id=${post[i].id}';" value="Read more" />
+                        </div>
                         </li>`
 
                         const carousel = document.querySelector(".carousel");

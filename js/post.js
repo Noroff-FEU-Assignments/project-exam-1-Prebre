@@ -96,5 +96,3 @@ async function getPost() {
 
 getPost();
 
-// Image modal
-

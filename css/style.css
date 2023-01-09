@@ -454,11 +454,8 @@ textarea {
     border-radius: 50%;
 }
 
-.profile-img img {
-    width: 60px;
-}
-
 .profile-img {
+    width: 100px;
     border: 1px solid var(--txt-alt);
     border-radius: 100%;
 }
