@@ -16,6 +16,10 @@ async function getList() {
 
                 for(let i = 0; i < post.length; i++) {
 
+                        if (i === 10) {
+                                break;
+                            }
+
                         listContainer.innerHTML += `<div class="card">
                                 <a href="post.html?id=${post[i].id}"><h2>${post[i].title.rendered}</h2></a>
                                 <div class="list-img-container">
@@ -23,7 +27,8 @@ async function getList() {
                                 </div>
                                 <p>${post[i].excerpt.rendered}</p>
                                 </div>`
-
+                        
+                        /*function loadTen()*/
                                                         
                 }
         }
