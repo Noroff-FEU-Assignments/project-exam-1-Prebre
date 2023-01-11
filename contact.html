@@ -64,15 +64,24 @@
                 <p>Do you have any questions about the blog, its content, or maybe you have some suggestions for something we should post about? Let us know in the form down below, and we'll get back to you ASAP!</p>
             </section>
             <section id="form-container">
-                <form id="contactForm" name="contactForm" onsubmit="">
+                <div id="validation-message"></div>
+                <form id="contactForm" name="contactForm" onsubmit="return validate();" action="">
                     <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name" required><br>
+                    <input type="text" id="name" name="name">
+                    <br>
+
                     <label for="mail">Mail</label><br>
-                    <input type="email" id="mail" name="mail" required><br>
+                    <input type="email" id="mail" name="mail">
+                    <br>
+
                     <label for="subject">Subject</label><br>
-                    <input type="text" id="subject" name="subject" required><br>
+                    <input type="text" id="subject" name="subject">
+                    <br>
+
                     <label for="message">Message</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
+                    <textarea id="message" name="message"></textarea>
+                    <br>
+
                     <button id="submit" class="cta">Send form &nbsp; <img src="/visuals/paper-plane.png" alt="Paper plane icon" class="icon-l"></button>
                 </form>
             </section>
