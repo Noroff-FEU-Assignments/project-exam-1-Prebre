@@ -364,12 +364,12 @@ input, textarea {
 }
 
 #contactForm label {
+    margin-top: 30px;
     margin-left: 30px;
 }
 
 #contactForm input {
     margin-top: 5px;
-    margin-bottom: 30px;
 }
 
 textarea {
@@ -382,19 +382,40 @@ textarea {
     margin: 30px 23%;
 }
 
-.validate {
-    display: block;
-    color: red;
-    margin-top: 5px;
+#validation-message {
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    font-family: var(--paragraph);
+    font-style: italic;
+}
+
+input.invalid, textarea.valid {
+    border-color: #A30000;
+    background-color: #FF8A8A;
+}
+  
+input:focus.invalid, textarea:focus.invalid {
+    outline: none;
+}
+
+input.valid, textarea.valid {
+    border-color: #00A300;
+    background-color: #B1D8B7;
 }
 
 .error {
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -ms-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-    box-shadow: 0 0 15px 0 rgba(255,36,0,1);
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 80%;
+    color: white;
+    background-color: #A30000;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+  
+.error.active {
+    padding: 0.5em;
 }
 
 /***** IMAGES *****/
@@ -601,6 +622,14 @@ textarea {
         width: 250px;
     }
 
+    #validation-message {
+        font-size: 0.8rem;
+    }
+
+    .error {
+        width: 250px;
+    }
+
     .cta {
     font-size: 1rem;
     padding: 7px 7px 7px 9px;
@@ -714,6 +743,14 @@ textarea {
     input, textarea {
         width: 350px;
     }
+    
+    #validation-message {
+        font-size: 1rem;
+    }
+
+    .error {
+        width: 350px;
+    }
 
     .cta {
     font-size: 1rem;
@@ -824,6 +861,14 @@ textarea {
     }
 
     input, textarea {
+        width: 350px;
+    }
+    
+    #validation-message {
+        font-size: 1rem;
+    }
+
+    .error {
         width: 350px;
     }
 

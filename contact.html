@@ -64,22 +64,25 @@
                 <p>Do you have any questions about the blog, its content, or maybe you have some suggestions for something we should post about? Let us know in the form down below, and we'll get back to you ASAP!</p>
             </section>
             <section id="form-container">
-                <div id="validation-message"></div>
-                <form id="contactForm" name="contactForm" onsubmit="return validate();" action="">
-                    <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name">
+                <form id="contactForm" name="contactForm" action="">
+                    <label for="fullname">Name</label><br>
+                    <input type="text" id="fullname" name="fullname">
+                    <span class="error"></span>
                     <br>
 
                     <label for="mail">Mail</label><br>
                     <input type="email" id="mail" name="mail">
+                    <span class="error"></span>
                     <br>
 
                     <label for="subject">Subject</label><br>
                     <input type="text" id="subject" name="subject">
+                    <span class="error"></span>
                     <br>
 
                     <label for="message">Message</label><br>
                     <textarea id="message" name="message"></textarea>
+                    <span class="error"></span>
                     <br>
 
                     <button id="submit" class="cta">Send form &nbsp; <img src="/visuals/paper-plane.png" alt="Paper plane icon" class="icon-l"></button>
@@ -95,7 +98,7 @@
             </ul>
         </footer>
 
-        <script src="/js/contact.js" type="module"></script>
+        <script src="/js/contact.js"></script>
         <script src="/js/top-button.js"></script>
     </body>
 </html>
