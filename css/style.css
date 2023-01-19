@@ -85,8 +85,7 @@ main {
     margin: 0 auto;
 }
 
-#welcome, #about, #contact, #blog-list {
-    padding: 30px;    
+#welcome, #about, #contact, #blog-list {  
     background-color: var(--bg-main);
     border-left: 1px solid var(--txt-main);
     border-right: 1px solid var(--txt-main);
@@ -132,9 +131,6 @@ main {
 
 #form-container {
     padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     background-color: var(--bg-alt);
     border-left: 1px solid var(--txt-alt);
     border-right: 1px solid var(--txt-alt);
@@ -232,11 +228,6 @@ nav ul {
     flex-direction: row;
     text-align: center;
     padding-left: 0px;
-}
-
-nav li {
-    width: 75px;
-    padding: 0px 10px;
 }
 
 ul {
@@ -352,6 +343,10 @@ button, .cta {
     color: var(--cta);
 }
 
+#contact-button, #homepage-button {
+    margin: 10px auto;
+}
+
 /***** FORMS *****/
 
 input, textarea {
@@ -363,13 +358,16 @@ input, textarea {
     background-color: var(--bg-main);
 }
 
-#contactForm label {
-    margin-top: 30px;
-    margin-left: 30px;
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
-#contactForm input {
+#contactForm input, #contactForm textarea {
     margin-top: 5px;
+    align-self: center;
 }
 
 textarea {
@@ -405,17 +403,16 @@ input.valid, textarea.valid {
 }
 
 .error {
-    display: inline-block;
-    margin-left: 4px;
+    margin: 0px auto;
     font-size: 80%;
-    color: white;
-    background-color: #A30000;
-    border-radius: 0 0 5px 5px;
-    box-sizing: border-box;
+    font-family: var(--paragraph);
+    text-transform: uppercase;
+    color: #A30000;
 }
   
 .error.active {
     padding: 0.5em;
+    margin-bottom: 20px;
 }
 
 /***** IMAGES *****/
@@ -618,6 +615,15 @@ input.valid, textarea.valid {
         justify-content: center;
     }
 
+    nav li, .current {
+        width: 85px;
+        padding: 0px 0px;
+    }
+
+    #contactForm label {
+        margin-left: 50px;
+    }
+
     input, textarea {
         width: 250px;
     }
@@ -652,12 +658,13 @@ input.valid, textarea.valid {
         width: 85px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-        margin: 10px auto;
+    #welcome, #about, #contact, #blog-list {
+        padding: 10px;
     }
 
     .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-    width: 320px;
+        margin: 10px auto;
+        width: 320px;
     }
 
     .carousel-img {
@@ -740,6 +747,15 @@ input.valid, textarea.valid {
         justify-content: center;
     }
 
+    nav li {
+        width: 75px;
+        padding: 0px 10px;
+    }
+
+    #contactForm label {
+        margin-left: 70px;
+    }
+
     input, textarea {
         width: 350px;
     }
@@ -774,12 +790,13 @@ input.valid, textarea.valid {
         width: 150px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-        margin: 20px auto;
+    #welcome, #about, #contact, #blog-list {
+        padding: 30px;
     }
 
     .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-    width: 450px;
+        margin: 20px auto;
+        width: 450px;
     }
     
     .carousel-img {
@@ -860,6 +877,15 @@ input.valid, textarea.valid {
         justify-content: center;
     }
 
+    nav li {
+        width: 75px;
+        padding: 0px 10px;
+    }
+
+    #contactForm label {
+        margin-left: 150px;
+    }
+
     input, textarea {
         width: 350px;
     }
@@ -894,12 +920,13 @@ input.valid, textarea.valid {
         width: 200px;
     }
 
-    .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-        margin: 30px auto;
+    #welcome, #about, #contact, #blog-list {
+        padding: 30px;
     }
 
     .content-container, #latest-posts, #list-container, #author-bio, #form-container {
-    width: 600px;
+        margin: 30px auto;
+        width: 600px;
     }
 
     .carousel-img {

@@ -64,11 +64,11 @@ async function getPost() {
             </div>
             <div class="share-wrapper">
                 <p class="share">Share this post to:</p>
-                <button id="facebook" class="socials"><img src="/visuals/facebook.png" alt="Share a link to this post on Facebook"></button>
-                <button id="twitter"  class="socials"><img src="/visuals/twitter.png" alt="Share a link to this post on Twitter"></button>
-                <button id="tumblr" class="socials"><img src="/visuals/tumblr.png" alt="Share a link to this post on Tumblr"></button>
-                <button id="instagram" class="socials"><img src="/visuals/instagram.png" alt="Share a link to this post on Instagram"></button>
-                <button id="email" class="socials"><img src="/visuals/telegram.png" alt="Share a link to this post via e-mail"></button>
+                <button id="facebook" class="socials" onclick="shareFB"><img src="/visuals/facebook.png" alt="Share a link to this post on Facebook"></button>
+                <button id="twitter"  class="socials" onclick="shareTwitter"><img src="/visuals/twitter.png" alt="Share a link to this post on Twitter"></button>
+                <button id="tumblr" class="socials" onclick="shareTumblr"><img src="/visuals/tumblr.png" alt="Share a link to this post on Tumblr"></button>
+                <button id="instagram" class="socials" onclick="shareInsta"><img src="/visuals/instagram.png" alt="Share a link to this post on Instagram"></button>
+                <button id="email" class="socials" onclick="shareMail"><img src="/visuals/telegram.png" alt="Share a link to this post via e-mail"></button>
             </div>`
         
             title.innerHTML += `${post.title.rendered} | WotW`

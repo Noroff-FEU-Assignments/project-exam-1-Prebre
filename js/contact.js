@@ -120,3 +120,46 @@ form.addEventListener("submit", (event) => {
     }
 
 });
+
+function validate(){
+    const fullname = document.getElementById("fullname").value;
+    const mail = document.getElementById("mail").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const errorName = fullname.nextElementSibling;
+    const errorMail = mail.nextElementSibling;
+    const errorSubj = subject.nextElementSibling;
+    const errorMsg = message.nextElementSibling;
+
+    let text;
+    if(fullname.length < 5){
+        text = "Name must contain more than 5 characters"
+        errorName.innerHTML = text;
+        errorName.className = "error active";
+        message.className = "invalid"
+        return false;
+    }
+    if(mail.indexOf("@") == -1 || mail.length < 5){
+        text = "Please enter a valid email address"
+        errorMail.innerHTML = text;
+        errorMail.className = "error active";
+        mail.className = "invalid"
+        return false;
+    }
+    if(subject.length < 15){
+        text = "Subject must contain more than 15 characters"
+        errorSubj.innerHTML = text;
+        errorSubj.className = "error active";
+        subject.className = "invalid"
+        return false;
+    }
+    if(message.length < 25){
+        text = "Message must contain more than 25 characters"
+        errorMsg.innerHTML = text;
+        errorMsg.className = "error active";
+        message.className = "invalid"
+        return false;
+    }
+    return true;
+}

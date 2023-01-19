@@ -60,33 +60,13 @@
             <button onclick="toTop()" class="top-button" title="Go to top">Back to top<br>
                 <img src="/visuals/arrow-circle-up.png" alt="Button to return to the top of the page"></button>
             <section class="content-container" id="contact">
-                <h1>Contact us</h1>
-                <p>Do you have any questions about the blog, its content, or maybe you have some suggestions for something we should post about? Let us know in the form down below, and we'll get back to you ASAP!</p>
-            </section>
-            <section id="form-container">
-                <form id="contactForm" name="contactForm" action="/contact-success.html" onsubmit="return validate();">
-                    <label for="fullname">Name</label><br>
-                    <input type="text" id="fullname" name="fullname">
-                    <div class="error"></div>
-                    <br>
-
-                    <label for="mail">Mail</label><br>
-                    <input type="email" id="mail" name="mail">
-                    <div class="error"></div>
-                    <br>
-
-                    <label for="subject">Subject</label><br>
-                    <input type="text" id="subject" name="subject">
-                    <div class="error"></div>
-                    <br>
-
-                    <label for="message">Message</label><br>
-                    <textarea id="message" name="message"></textarea>
-                    <div class="error"></div>
-                    <br>
-
-                    <button id="submit" class="cta">Send form &nbsp; <img src="/visuals/paper-plane.png" alt="Paper plane icon" class="icon-l"></button>
-                </form>
+                <h1>Thank you for contacting us!</h1>
+                <p>We look forward to reading what you've sent us, and promise one of us will review your message as soon as possible! All content suggestions will be taken into considerations, but some of them might require some time before posting. We try to have all our post use the same structure as much as possible, which sometimes requires more finetuning.</p>
+                <p>Got more you want to share with us?</p>
+                <div class="button-wrapper">
+                    <input type="button" id="contact-button" class="cta" onclick="location.href='contact.html';" value="Back to form" />
+                    <input type="button" id="homepage-button" class="cta" onclick="location.href='index.html';" value="Back to homepage" />
+            </div>
             </section>
         </main>
 
