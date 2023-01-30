@@ -16,11 +16,7 @@ async function getList() {
 
                 const post = await response.json();
 
-                for(let i = 0; i < post.length; i++) {
-
-                        if (i === 10) {
-                                break;
-                            }
+                for(let i = 0; i < 10; i++) {
 
                         listContainer.innerHTML += `<div class="card">
                                 <a href="post.html?id=${post[i].id}"><h2>${post[i].title.rendered}</h2></a>
@@ -39,14 +35,10 @@ async function getList() {
 
 getList();
 
-/*loadPosts.addEventListener("click", loadTen);
+loadPosts.addEventListener("click", loadTen);
                         
                         function loadTen() {
-                                for(let j = i + 10; j < post.length; j++) {
-
-                                        if(j === i + 20) {
-                                                break;
-                                        }
+                                for(let j = 10; j < 20; j++) {
 
                                         listContainer.innerHTML += `<div class="card">
                                                 <a href="post.html?id=${post[j].id}"><h2>${post[j].title.rendered}</h2></a>
@@ -57,4 +49,4 @@ getList();
                                                 </div>`
                                 }
                         }
-                        loadTen();*/
+                        loadTen();
