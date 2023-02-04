@@ -1,3 +1,5 @@
+// Form Validation
+
 const form = document.querySelector("#contactForm");
 const fullname = document.getElementById("fullname");
 const mail = document.getElementById("mail");
@@ -161,8 +163,5 @@ function validate(){
         message.className = "invalid"
         return false;
     }
-    else {
-        Location.href = "/contact-success.html";
         return true;
-    }
 }
