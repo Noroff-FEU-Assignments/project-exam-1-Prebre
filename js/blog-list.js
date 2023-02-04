@@ -20,7 +20,7 @@ async function getList() {
                                 <div class="list-img-container">
                                         <img src="${post[i].jetpack_featured_media_url}" class="list-img" alt="#">
                                 </div>
-                                <p>${post[i].excerpt.rendered}</p>
+                                ${post[i].excerpt.rendered}
                                 </div>`;
     }
   } catch (error) {

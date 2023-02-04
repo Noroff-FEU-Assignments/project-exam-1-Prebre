@@ -8,6 +8,8 @@ export const authors = `${api}users`;
 
 export const categories = `${api}categories`
 
+export const pages = `${api}pages`
+
 
 // Key & Secret
 

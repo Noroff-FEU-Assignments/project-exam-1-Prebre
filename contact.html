@@ -72,18 +72,11 @@
         />
       </button>
       <section class="content-container" id="contact">
-        <h1>Contact us</h1>
-        <p>
-          Do you have any questions about the blog, its content, or maybe you
-          have some suggestions for something we should post about? Let us know
-          in the form down below, and we'll get back to you ASAP!
-        </p>
       </section>
       <section id="form-container">
         <form
           id="contactForm"
           name="contactForm"
-          action="/contact-success.html"
           onsubmit="return validate();"
         >
           <label for="fullname">Name</label><br />
@@ -126,7 +119,8 @@
       </ul>
     </footer>
 
-    <script src="/js/contact.js"></script>
+    <script src="/js/contact.js" type="module"></script>
+    <script src="/js/form.js"></script>
     <script src="/js/top-button.js"></script>
   </body>
 </html>

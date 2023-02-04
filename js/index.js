@@ -1,62 +1,25 @@
-// Latest
+// Index text
 
-import { posts } from "./constants/api.js";
+import { pages } from "./constants/api.js";
 
-const latestContainer = document.querySelector("#latest-container");
+const index = `${pages}/360`;
 
-latestContainer.innerHTML = "";
+const indexContainer = document.querySelector ("#welcome");
 
-async function getLatest() {
-        try {
-                const response = await fetch(posts);
+indexContainer.innerHTML = "";
 
-                const post = await response.json();
+async function getText() {
+  try {
+    const response = await fetch(index);
 
-                for(let i = 0; i < post.length; i++) {
+    const page = await response.json();
 
-                        if (i === 5) {
-                            break;
-                        }
-
-                        latestContainer.innerHTML += `<li class="carousel">
-                        <h3><a href="post.html?id=${post[i].id}" alt="#">${post[i].title.rendered}</a></h3>
-                        <div class="img-container">
-                                <img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="#">
-                        </div>
-                        <p class="excerpt">${post[i].excerpt.rendered}</p>
-                        <div class="button-wrapper">
-                                <input type="button" class="cta" onclick="location.href='post.html?id=${post[i].id}';" value="Read more" />
-                        </div>
-                        </li>`
-
-                        const carousel = document.querySelector(".carousel");
-
-                        const prevPost = document.getElementById("prev-post");
-
-                        const nextPost = document.getElementById("next-post");
-
-
-                        nextPost.addEventListener("click", () => {
-                                const carouselWidth = carousel.clientWidth;
-                                latestContainer.scrollLeft += carouselWidth;
-                        });
-
-                        prevPost.addEventListener("click", () => {
-                                const carouselWidth = carousel.clientWidth;
-                                latestContainer.scrollLeft -= carouselWidth;
-                        });
-
-                                                        
-                }
-        }
-        catch(error) {
-                console.log("An error has occurred");
-                latestContainer.innerHTML = "An error has occurred"
-        }
+    indexContainer.innerHTML += `<h1>${page.title.rendered}</h1>
+                ${page.content.rendered}`;
+  } catch (error) {
+    console.log("An error has occurred");
+    indexContainer.innerHTML = "An error has occurred";
+  }
 }
 
-getLatest();
-
-
-// Arrow buttons
-
+getText();
