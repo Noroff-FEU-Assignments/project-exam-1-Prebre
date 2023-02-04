@@ -18,7 +18,7 @@ async function getList() {
       listContainer.innerHTML += `<div class="card">
                                 <a href="post.html?id=${post[i].id}"><h2>${post[i].title.rendered}</h2></a>
                                 <div class="list-img-container">
-                                        <img src="${post[i].jetpack_featured_media_url}" class="list-img" alt="#">
+                                        <img src="${post[i].jetpack_featured_media_url}" class="list-img" alt="Image to visualise the theme of this post, ${post[i].title.rendered}">
                                 </div>
                                 ${post[i].excerpt.rendered}
                                 </div>`;

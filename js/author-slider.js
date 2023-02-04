@@ -14,7 +14,7 @@ async function getAuthors() {
 
     for (let i = 0; i < author.length; i++) {
       authorContainer.innerHTML += `<li class="carousel">
-                        <div class="img-container"><img src="${author[i].avatar_urls[96]}" class="profile-img" alt="#"></div>
+                        <div class="img-container"><img src="${author[i].avatar_urls[96]}" class="profile-img" alt="Profile picture of user ${author[i].name}"></div>
                         <h3>${author[i].name}</h3>
                         <p class="excerpt">${author[i].description}</p>
                         </li>`;

@@ -52,7 +52,7 @@ async function getPost() {
                 </div><br>
                 <p class="categories">Posted in<br>${category.name}</p>
                 <div class="post-img">
-                    <img id="modal-img" src="${post.jetpack_featured_media_url}" alt="">
+                    <img id="modal-img" src="${post.jetpack_featured_media_url}" alt="Image to visualise the theme of this post, ${post.title.rendered}">
                     <div id="modal-container" class="modal">
                         <span class="close">&times;</span>
                         <img class="modal-content" id="img-preview">

@@ -20,7 +20,7 @@ async function getLatest() {
       latestContainer.innerHTML += `<li class="carousel">
                         <h3><a href="post.html?id=${post[i].id}" alt="#">${post[i].title.rendered}</a></h3>
                         <div class="img-container">
-                                <img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="#">
+                                <img src="${post[i].jetpack_featured_media_url}" class="carousel-img" alt="Image to visualise the theme of this post, ${post[i].title.rendered}">
                         </div>
                         ${post[i].excerpt.rendered}
                         <div class="button-wrapper">
