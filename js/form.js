@@ -1,6 +1,6 @@
 // Form Validation
 
-const form = document.querySelector("#contactForm");
+const form = document.getElementById("contactForm");
 const fullname = document.getElementById("fullname");
 const mail = document.getElementById("mail");
 const subject = document.getElementById("subject");

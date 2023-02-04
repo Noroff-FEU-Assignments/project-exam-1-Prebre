@@ -246,6 +246,10 @@ input {
   font-family: var(--paragraph);
 }
 
+label {
+  padding-top: 20px;
+}
+
 nav ul {
   flex-direction: row;
   text-align: center;
@@ -416,23 +420,6 @@ textarea {
   font-style: italic;
 }
 
-input.invalid,
-textarea.valid {
-  border-color: #a30000;
-  background-color: #ff8a8a;
-}
-
-input:focus.invalid,
-textarea:focus.invalid {
-  outline: none;
-}
-
-input.valid,
-textarea.valid {
-  border-color: #00a300;
-  background-color: #b1d8b7;
-}
-
 .error {
   margin: 0px auto;
   font-size: 80%;
@@ -443,7 +430,6 @@ textarea.valid {
 
 .error.active {
   padding: 0.5em;
-  margin-bottom: 20px;
 }
 
 /***** IMAGES *****/
