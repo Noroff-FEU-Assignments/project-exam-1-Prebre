@@ -4,7 +4,7 @@ import { pages } from "./constants/api.js";
 
 const success = `${pages}/369`;
 
-const successContainer = document.querySelector ("#success");
+const successContainer = document.querySelector("#success");
 
 successContainer.innerHTML = "";
 

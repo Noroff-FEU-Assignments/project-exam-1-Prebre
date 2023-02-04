@@ -1,10 +1,10 @@
-// contact us text
+// Contact us text
 
 import { pages } from "./constants/api.js";
 
 const contact = `${pages}/367`;
 
-const contactContainer = document.querySelector ("#contact");
+const contactContainer = document.querySelector("#contact");
 
 contactContainer.innerHTML = "";
 

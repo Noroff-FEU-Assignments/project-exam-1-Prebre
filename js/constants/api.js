@@ -6,17 +6,15 @@ export const posts = `${api}posts`;
 
 export const authors = `${api}users`;
 
-export const categories = `${api}categories`
+export const categories = `${api}categories`;
 
-export const pages = `${api}pages`
-
+export const pages = `${api}pages`;
 
 // Key & Secret
 
-export const key = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144"
+export const key = "ck_06d5d8a678531b91ce7fc969d00bcb41e9ebe144";
 
-export const secret = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea"
-
+export const secret = "cs_df85f85242b5887c35d06c1997eb5b3557efd8ea";
 
 // URL
 

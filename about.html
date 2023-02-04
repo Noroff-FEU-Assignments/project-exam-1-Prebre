@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="english">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht, initial-scales=1.0" />
+    <meta name="description" content="###" />
+    <title>About | Wizards of the Web</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Hotjar Tracking Code for Wizards of the Web -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3302482, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widht, initial-scales=1.0">
-        <meta name="description" content="###">
-        <title>About | Wizards of the Web</title>
-        <link href="css/style.css" rel="stylesheet">
-        <!-- Hotjar Tracking Code for Wizards of the Web -->
-            <script>
-                (function(h,o,t,j,a,r){
-                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:3302482,hjsv:6};
-                    a=o.getElementsByTagName('head')[0];
-                    r=o.createElement('script');r.async=1;
-                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                    a.appendChild(r);
-                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            </script>
-    </head>
+  <body class="variables">
+    <header>
+      <section class="topbar">
+        <div class="site-name">
+          <a href="index.html" class="logo">Wizards of the Web</a>
+          <p class="tagline">- a blog for D&D ideas -</p>
+          <div class="site-nav">
+            <label for="hb-nav">
+              <img
+                src="/visuals/menu-burger.png"
+                class="hb-cb"
+                alt="Menu icon for mobile devices"
+              />
+            </label>
+            <input type="checkbox" id="hb-nav" />
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="post-list.html">Post list</a></li>
+                <li><a href="about.html" class="current">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
 
-    <body class="variables">
-        <header>
-            <section class="topbar">
-                <div class="site-name">
-                    <a href="index.html" class="logo">Wizards of the Web</a>
-                    <p class="tagline">- a blog for D&D ideas -</p>
-                    <div class="site-nav">
-                        <label for="hb-nav">
-                            <img src="/visuals/menu-burger.png" class="hb-cb" alt="Menu icon for mobile devices">
-                        </label>
-                        <input type="checkbox" id="hb-nav">
-                        <nav>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="post-list.html">Post list</a></li>
-                                <li><a href="about.html" class="current">About us</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-                            
-            <!-- <section class="search-line">
+      <!-- <section class="search-line">
                 <div class="site-search">
                     <form class="searchbar" action="#">
                         <input type="text" placeholder="Search for posts">
@@ -53,38 +61,46 @@
                     </form>
                 </div>
             </section> -->
-            
-        </header>
+    </header>
 
-        <main>
-            <button onclick="toTop()" class="top-button" title="Go to top">Back to top<br>
-                <img src="/visuals/arrow-circle-up.png" alt="Button to return to the top of the page"></button>
-            <section class="content-container" id="about">
-            </section>
-            <section id="author-bio">
-                <h2>Authors</h2>
-                <button class="carousel-arrow" id="prev-author">
-                    <img src="../visuals/arrow-circle-left.png">
-                </button>
-                <button class="carousel-arrow" id="next-author">
-                    <img src="../visuals/arrow-circle-right.png">
-                </button>
-                <ul class="carousel-container" id="author-container">
-                    <div class="loading"><div></div><div></div><div></div><div></div></div>
-                </ul>
-            </section>
-        </main>
+    <main>
+      <button onclick="toTop()" class="top-button" title="Go to top">
+        Back to top<br />
+        <img
+          src="/visuals/arrow-circle-up.png"
+          alt="Button to return to the top of the page"
+        />
+      </button>
+      <section class="content-container" id="about"></section>
+      <section id="author-bio">
+        <h2>Authors</h2>
+        <button class="carousel-arrow" id="prev-author">
+          <img src="../visuals/arrow-circle-left.png" />
+        </button>
+        <button class="carousel-arrow" id="next-author">
+          <img src="../visuals/arrow-circle-right.png" />
+        </button>
+        <ul class="carousel-container" id="author-container">
+          <div class="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </ul>
+      </section>
+    </main>
 
-        <footer>
-            <ul>
-                <li>© Ida Katrine Presttun-Brekken,2022</li>
-                <li>Project Exam, semester 2</li>
-                <li>Noroff School of Technology and Digital Media</li>
-            </ul>
-        </footer>
+    <footer>
+      <ul>
+        <li>© Ida Katrine Presttun-Brekken,2022</li>
+        <li>Project Exam, semester 2</li>
+        <li>Noroff School of Technology and Digital Media</li>
+      </ul>
+    </footer>
 
-        <script src="/js/about.js" type="module"></script>
-        <script src="/js/author-slider.js" type="module"></script>
-        <script src="/js/top-button.js"></script>
-    </body>
+    <script src="/js/about.js" type="module"></script>
+    <script src="/js/author-slider.js" type="module"></script>
+    <script src="/js/top-button.js"></script>
+  </body>
 </html>

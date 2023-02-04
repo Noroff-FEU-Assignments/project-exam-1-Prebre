@@ -4,7 +4,7 @@ import { pages } from "./constants/api.js";
 
 const about = `${pages}/365`;
 
-const aboutContainer = document.querySelector ("#about");
+const aboutContainer = document.querySelector("#about");
 
 aboutContainer.innerHTML = "";
 

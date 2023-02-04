@@ -4,7 +4,7 @@ import { pages } from "./constants/api.js";
 
 const index = `${pages}/360`;
 
-const indexContainer = document.querySelector ("#welcome");
+const indexContainer = document.querySelector("#welcome");
 
 indexContainer.innerHTML = "";
 
