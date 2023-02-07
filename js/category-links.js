@@ -12,8 +12,8 @@ async function getLinks() {
 
     const category = await response.json();
 
-    for (let i = 0; i < 10; i++) {
-      linkContainer.innerHTML += `<a class="cta" href="/category.html?${category[i].id}">${category[i].name}</a>`;
+    for (let i = 0; i < category.length; i++) {
+      linkContainer.innerHTML += `<a class="cta" href="/category.html?id=${category[i].id}">${category[i].name}</a>`;
     }
   } catch (error) {
     console.log("An error has occurred");

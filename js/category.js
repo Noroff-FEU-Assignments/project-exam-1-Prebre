@@ -1,6 +1,6 @@
 // Post list
 
-import { categories } from "./constants/api.js";
+import { posts } from "./constants/api.js";
 
 const queryString = document.location.search;
 
@@ -10,7 +10,7 @@ const id = parameters.get("id");
 
 console.log(id);
 
-const catURL = `${categories}/${id}`;
+const catURL = `${posts}?categories=${id}`;
 
 const listContainer = document.querySelector("#category-container");
 
