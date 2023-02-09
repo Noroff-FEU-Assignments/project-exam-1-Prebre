@@ -40,15 +40,22 @@ async function getPost() {
 
     const category = await categoryResponse.json();
 
-    console.log(post);
+    let dateInitial = `${post.date}`;
 
-    console.log(author);
+    let dateReformat = new Date(dateInitial).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    });
 
     postContainer.innerHTML += `<div class="post-txt">
                 <h1>${post.title.rendered}</h1>
                 <div class="author-date">
                     <p class="author">Written by &nbsp; ${author.name}</p>
-                    <p class="date">Posted ${post.date}</p>
+                    <p class="date">Posted ${dateReformat}</p>
                 </div><br>
                 <p class="categories">Posted in<br>${category.name}</p>
                 <div class="post-img">

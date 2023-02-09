@@ -279,7 +279,6 @@ ul {
 }
 
 .share-wrapper {
-  margin: -25px 0 30px 0;
   padding: 10px 0px;
   border-top: 1px solid var(--txt-main);
   border-bottom: 1px solid var(--txt-main);
@@ -728,6 +727,10 @@ textarea {
     margin: 5px 0px;
   }
 
+  .share-wrapper {
+    margin: -5px 0 30px 0;
+  }
+
   #link-container {
     display: flex;
     flex-wrap: wrap;
@@ -893,6 +896,10 @@ textarea {
     padding-bottom: 10px;
   }
 
+  .share-wrapper {
+    margin: -15px 0 30px 0;
+  }
+
   #link-container {
     display: flex;
     flex-wrap: wrap;
@@ -1045,6 +1052,10 @@ textarea {
 
   .categories {
     padding-top: 30px;
+  }
+
+  .share-wrapper {
+    margin: -25px 0 30px 0;
   }
 
   #link-container {
