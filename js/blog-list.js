@@ -37,6 +37,10 @@ async function getList() {
                             </div>`;
       }
 
+      if ((post.length = 0)) {
+        loadBtn.disabled = true;
+      }
+
       loadTen();
     });
   } catch (error) {
