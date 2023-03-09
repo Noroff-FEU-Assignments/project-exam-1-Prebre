@@ -1,6 +1,6 @@
 # Wizards of the Web
 
-![image](images/wotw-index-500.png)
+![image](images/wotw-index-1000.png)
 
 The purpose of this project is to showcase what I have learned about design, layout, HTML, CSS, JavaScript and API calls.
 
