@@ -1,6 +1,6 @@
 # Wizards of the Web
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](images/wotw-index-500.png)
 
 The purpose of this project is to showcase what I have learned about design, layout, HTML, CSS, JavaScript and API calls.
 
